@@ -1,37 +1,42 @@
+# the following section defines all inputs
 data:
+# add paths to ISOseq data sets. Each data set as a separate line
     longnucl:
-        ds1: /nfs/pgsb/commons/databases/plant.annot/Testdata/longnucl/sequences.fasta
+        ds1: <path to ISOseq samples>
+# add paths to reference proteins
     refprot:
-        triticeae: /nfs/pgsb/commons/databases/plant.annot/Testdata/proteins/uniprot_Triticeae_complete_collapsed_161005_stop_selected.fasta
+        triticeae: <path to protein sequences>
+# add paths to RNAseq data sets. Create a data set entry for different libaries. DS1 is an example for paired-end data; DS2 is single-ended
     rnaseq:
-        ds1:
-            LIB1753:
+        ds1: # name of first data set
+            LIB1: # name of first library
                 1:
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L005_R1_007.fastq.gz
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L006_R1_007.fastq.gz
+                    - <path to RNAseq paired data read1; lane 1>
+                    - <path to RNAseq paired data read1; lane 2>
                 2:
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L005_R2_007.fastq.gz
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L006_R2_007.fastq.gz
-        ds2:
-            LIB1762:
+                    - <path to RNAseq paired data read2; lane 1>
+                    - <path to RNAseq paired data read2; lane 2>
+        ds2: # name of second data set
+            LIB2: # name of second library
                 1:
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds2/LIB1762_CAGATC_L005_R1_007.fastq.gz
-                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds2/LIB1762_CAGATC_L005_R2_007.fastq.gz
-    hisat2db: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948
+                    - <path to RNAseq single read1; lane 1>
+                    - <path to RNAseq single read1; lane 2>
+    hisat2db: <path to hisat2 index>
     gmap:
-        dbdir: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome
-        dbname: 160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948
+        dbdir: <path gmap database directory>
+        dbname: <name of gmap database>
     gth:
-        chr1: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948.fa
-    genome: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948.fa
+        chr1: <path to genome or chromosome sequence>
+    genome: <path to genome>
     transdecoder:
-        pfamhmm: /nfs/pgsb/commons/databases/plant.annot/PFAM/Pfam-A.hmm
-        blastp: /nfs/pgsb/scratch/sven.twardziok/Ressources/BLAST/UniProt/uniprot-Magnoliophyta_reviewed_160803
+        pfamhmm: <path to Pfam-A.hmm for transdecoder> 
+        blastp: <path to protein blast database for transdecoder>
     cocla:
-        unimag: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Magnoliophyta_reviewed_collapsed_170220.fasta
-        unipoa: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Poaceae_complete_collapsed_170220.fasta
-        trep: /nfs/pgsb/commons/databases/plant.annot/Classification/PTREP16_sep2016.fasta
+        unimag: <path to reference database 1> #/nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Magnoliophyta_reviewed_collapsed_170220.fasta
+        unipoa: <path to reference database 2> #/nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Poaceae_complete_collapsed_170220.fasta
+        trep: <path to transposon database> /nfs/pgsb/commons/databases/plant.annot/Classification/PTREP16_sep2016.fasta
 
+# the following section defines all executables and parameters
 hisat2:
     arguments: --dta --no-unal --max-intronlen 50000
     memory: 1G
@@ -79,20 +84,20 @@ cocla:
     evalue: 10
 
 executables:
-    blastp: /nfs/pgsb/commons/apps/blast/ncbi-blast-2.3.0+/bin/blastp
-    cuffcompare: /nfs/pgsb/commons/apps/cufflinks/cufflinks-2.2.1.Linux_x86_64/cuffcompare
-    gffread: /home/pgsb/sven.twardziok/anaconda3/bin/gffread
-    gth: /nfs/pgsb/commons/apps/threader/gth-1.6.6-Linux_x86_64-64bit/bin/gth
-    gmap: /nfs/pgsb/commons/apps/gmap/gmap-2016-06-30/bin/gmap
-    hmmscan: /nfs/pgsb/commons/apps/hmmer3/hmmer-3.1b2-linux-intel-x86_64/binaries/hmmscan
-    hisat2: /home/pgsb/sven.twardziok/Tools/hisat2-2.0.4/hisat2
-    samtools: /nfs/pgsb/commons/apps/samtools/samtools-1.3/samtools
-    bamtools: /nfs/pgsb/commons/apps/bamtools/bamtools/bin/bamtools
-    stringtie: /nfs/pgsb/commons/apps/assemblers/stringtie/stringtie-1.2.3.Linux_x86_64/stringtie
+    blastp: blastp
+    cuffcompare: cuffcompare
+    gffread: gffread
+    gth: <path to genome threader> #/nfs/pgsb/commons/apps/threader/gth-1.6.6-Linux_x86_64-64bit/bin/gth
+    gmap: gmap
+    hmmscan: hmmscan
+    hisat2: hisat2
+    samtools: samtools
+    bamtools: bamtools
+    stringtie: stringtie
     transdecoder:
-        extract: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cufflinks_gtf_genome_to_cdna_fasta.pl
-        convertgff3: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cufflinks_gtf_to_alignment_gff3.pl
-        convertgenome: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cdna_alignment_orf_to_genome_orf.pl
-        longorfs: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/TransDecoder.LongOrfs
-        predict: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/TransDecoder.Predict
+        extract: <path to cufflinks_gtf_genome_to_cdna_fasta.pl>
+        convertgff3: <path to cufflinks_gtf_to_alignment_gff3.pl>
+        convertgenome: <path to cdna_alignment_orf_to_genome_orf.pl>
+        longorfs: TransDecoder.LongOrfs
+        predict: TransDecoder.Predict
 
