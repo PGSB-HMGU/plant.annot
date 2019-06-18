@@ -1,8 +1,6 @@
-# plant.annot
-Annotation pipeline for plant genomes by PGSB
-
 # Plant.annot
-Repository for the annotation pipeline used @ PGSB. Tested on plant genomes such as Durum, Emmer, T.Urartu, wheat,…
+Repository for the annotation pipeline used @ PGSB. Tested on plant genomes. 
+
 
 # Requirements
 
@@ -12,7 +10,11 @@ All dependencies should be covered by the provided conda environment
 
 - install anaconda from [anaconda.org](https://anaconda.org)
 - install bioconda (see [bioconda](https://bioconda.github.io))
-- create plant.annot environment
+- clone repository
+
+<code>git clone https://github.com/PGSB-HMGU/plant.annot.git</code>
+
+- create plant.annot environment using the provided yaml file
 
 <code>conda env create --file=plant.annot.yaml</code>
 
@@ -24,7 +26,6 @@ All dependencies should be covered by the provided conda environment
 - download transposon database PTREP
 - download reference proteins from uniprot
 - download reference proteins form closely related species
-- download additional reference proteins
 - edit config.yaml
 	- define ISOseq data as described in config.yaml
 	- define reference proteins as described in config.yaml
