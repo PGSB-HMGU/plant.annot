@@ -39,6 +39,7 @@ dependencies:
   - freetype=2.9.1=h6debe1e_4
   - ftputil=3.2=py36_0
   - gettext=0.19.8.1=h5e8e0c9_1
+  - genomethreader
   - gffread=0.9.12=0
   - gitdb2=2.0.5=py_0
   - gitpython=2.1.11=py_0
