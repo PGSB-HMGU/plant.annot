@@ -162,11 +162,11 @@ dependencies:
   - r-rcolorbrewer=1.1_2=r351h6115d3f_1001
   - r-rcpp=1.0.0=r351h9d2a408_0
   - r-reshape2=1.4.3=r351h9d2a408_2
-  - r-rlang=0.3.0.1=r351h470a237_0
+  - r-rlang
   - r-scales=1.0.0=r351h9d2a408_1
   - r-stringi=1.2.4=r351h9d2a408_1
   - r-stringr=1.3.1=r351h6115d3f_1001
-  - r-tibble=2.0.0=r351hc070d10_0
+  - r-tibble
   - r-tidyr=0.8.2=r351h9d2a408_2
   - r-tidyselect=0.2.5=r351h9d2a408_0
   - r-utf8=1.1.4=r351hc070d10_0
