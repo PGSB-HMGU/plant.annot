@@ -82,7 +82,7 @@ dependencies:
   - libpng=1.6.36=ha92aebf_0
   - libprotobuf=3.6.1=hd28b015_0
   - libssh2
-  - libstdcxx-ng=7.2.0=hdf63c60_3
+  - libstdcxx-ng
   - libtiff=4.0.10=he6b73bb_1
   - libtool=2.4.6=h470a237_2
   - libuuid=2.32.1=h470a237_2
