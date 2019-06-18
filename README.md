@@ -14,6 +14,12 @@ All dependencies should be covered by the provided conda environment
 
 <code>git clone https://github.com/PGSB-HMGU/plant.annot.git</code>
 
+- cd into plant.annot directory
+
+<code>cd plant.annot</code>
+
+
+
 - create plant.annot environment using the provided yaml file
 
 <code>conda env create --file=plant.annot.yaml</code>
