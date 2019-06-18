@@ -87,8 +87,8 @@ executables:
     blastp: blastp
     cuffcompare: cuffcompare
     gffread: gffread
-    gth: <path to genome threader> 
-    gmap: gmap
+    gth: gth 
+    gmap: gmap.sse42
     hmmscan: hmmscan
     hisat2: hisat2
     samtools: samtools
