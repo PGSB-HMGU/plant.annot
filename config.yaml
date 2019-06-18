@@ -32,9 +32,9 @@ data:
         pfamhmm: <path to Pfam-A.hmm for transdecoder> 
         blastp: <path to protein blast database for transdecoder>
     cocla:
-        unimag: <path to reference database 1> #/nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Magnoliophyta_reviewed_collapsed_170220.fasta
-        unipoa: <path to reference database 2> #/nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Poaceae_complete_collapsed_170220.fasta
-        trep: <path to transposon database> /nfs/pgsb/commons/databases/plant.annot/Classification/PTREP16_sep2016.fasta
+        unimag: <path to reference database 1> 
+        unipoa: <path to reference database 2> 
+        trep: <path to transposon database> 
 
 # the following section defines all executables and parameters
 hisat2:
@@ -87,7 +87,7 @@ executables:
     blastp: blastp
     cuffcompare: cuffcompare
     gffread: gffread
-    gth: <path to genome threader> #/nfs/pgsb/commons/apps/threader/gth-1.6.6-Linux_x86_64-64bit/bin/gth
+    gth: <path to genome threader> 
     gmap: gmap
     hmmscan: hmmscan
     hisat2: hisat2
