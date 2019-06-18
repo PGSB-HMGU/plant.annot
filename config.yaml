@@ -1,0 +1,98 @@
+data:
+    longnucl:
+        ds1: /nfs/pgsb/commons/databases/plant.annot/Testdata/longnucl/sequences.fasta
+    refprot:
+        triticeae: /nfs/pgsb/commons/databases/plant.annot/Testdata/proteins/uniprot_Triticeae_complete_collapsed_161005_stop_selected.fasta
+    rnaseq:
+        ds1:
+            LIB1753:
+                1:
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L005_R1_007.fastq.gz
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L006_R1_007.fastq.gz
+                2:
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L005_R2_007.fastq.gz
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds1/LIB1753_GTGAAA_L006_R2_007.fastq.gz
+        ds2:
+            LIB1762:
+                1:
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds2/LIB1762_CAGATC_L005_R1_007.fastq.gz
+                    - /nfs/pgsb/commons/databases/plant.annot/Testdata/RNA-seq/ds2/LIB1762_CAGATC_L005_R2_007.fastq.gz
+    hisat2db: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948
+    gmap:
+        dbdir: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome
+        dbname: 160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948
+    gth:
+        chr1: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948.fa
+    genome: /nfs/pgsb/commons/databases/plant.annot/Testdata/Genome/160509_Chinese_Spring_v1_pseudomolecules.Chr1B.KASPext.323087718_329138948.fa
+    transdecoder:
+        pfamhmm: /nfs/pgsb/commons/databases/plant.annot/PFAM/Pfam-A.hmm
+        blastp: /nfs/pgsb/scratch/sven.twardziok/Ressources/BLAST/UniProt/uniprot-Magnoliophyta_reviewed_160803
+    cocla:
+        unimag: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Magnoliophyta_reviewed_collapsed_170220.fasta
+        unipoa: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Poaceae_complete_collapsed_170220.fasta
+        trep: /nfs/pgsb/commons/databases/plant.annot/Classification/PTREP16_sep2016.fasta
+
+hisat2:
+    arguments: --dta --no-unal --max-intronlen 50000
+    memory: 1G
+    nodes: 4
+
+stringtie:
+    arguments: -m 150 -t -f 0.3
+    memory: 1G
+    nodes: 4
+
+gmap:
+    arguments: -K 50000
+    memory: 4G
+    nodes: 1
+
+gth:
+    arguments: -species rice -startcodon -finalstopcodon -gcmaxgapwidth 50000 -gcmincoverage 70 -paralogs -prseedlength 7 -prhdist 4
+    memory: 5G
+    nbatches: 10
+    nodes: 1
+
+transdecoder:
+    nbatches: 5
+    predict:
+        nodes: 1
+        memory: 4G
+    convert:
+        nodes: 1
+        memory: 4G
+    stringtie:
+        memory: 2G
+        nodes: 4
+    hmmscan:
+        memory: 10M
+        nodes: 1
+    blastp:
+        memory: 1G
+        nodes: 1
+
+
+cocla:
+    nbatches: 10
+    memory: 1G
+    nodes: 1
+    evalue: 10
+
+executables:
+    blastp: /nfs/pgsb/commons/apps/blast/ncbi-blast-2.3.0+/bin/blastp
+    cuffcompare: /nfs/pgsb/commons/apps/cufflinks/cufflinks-2.2.1.Linux_x86_64/cuffcompare
+    gffread: /home/pgsb/sven.twardziok/anaconda3/bin/gffread
+    gth: /nfs/pgsb/commons/apps/threader/gth-1.6.6-Linux_x86_64-64bit/bin/gth
+    gmap: /nfs/pgsb/commons/apps/gmap/gmap-2016-06-30/bin/gmap
+    hmmscan: /nfs/pgsb/commons/apps/hmmer3/hmmer-3.1b2-linux-intel-x86_64/binaries/hmmscan
+    hisat2: /home/pgsb/sven.twardziok/Tools/hisat2-2.0.4/hisat2
+    samtools: /nfs/pgsb/commons/apps/samtools/samtools-1.3/samtools
+    bamtools: /nfs/pgsb/commons/apps/bamtools/bamtools/bin/bamtools
+    stringtie: /nfs/pgsb/commons/apps/assemblers/stringtie/stringtie-1.2.3.Linux_x86_64/stringtie
+    transdecoder:
+        extract: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cufflinks_gtf_genome_to_cdna_fasta.pl
+        convertgff3: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cufflinks_gtf_to_alignment_gff3.pl
+        convertgenome: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/util/cdna_alignment_orf_to_genome_orf.pl
+        longorfs: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/TransDecoder.LongOrfs
+        predict: /home/pgsb/sven.twardziok/Tools/TransDecoder-3.0.0/TransDecoder.Predict
+
