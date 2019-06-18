@@ -1,5 +1,5 @@
 # Plant.annot
-Repository for the annotation pipeline used @ PGSB. Tested on plant genomes. 
+Repository for the annotation pipeline used @ PGSB. Tested on plant genomes. Developed by Sven O. Twardziok.
 
 
 # Requirements
