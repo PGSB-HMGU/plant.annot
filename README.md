@@ -23,7 +23,7 @@ All dependencies should be covered by the provided conda environment
 <code>conda activate plant.annot</code>
 
 - install genome threader
-- download transposon database PTREP [Hypothetical TREP protein sequences](https://botserv2.uzh.ch/kelldata/trep-db/downloadFiles.html)
+- download transposon database PTREP from [Hypothetical TREP protein sequences](https://botserv2.uzh.ch/kelldata/trep-db/downloadFiles.html)
 - download reference proteins from uniprot
 - download reference proteins form closely related species
 - edit config.yaml

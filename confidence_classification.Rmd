@@ -1,0 +1,347 @@
+---
+title: "Gene annotation"
+subtitle: "Confidence classification"
+author:
+    - "sven.twardziok@posteo.de"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+params:
+   rmd: "report.Rmd"
+output:
+  html_document:
+  highlight: tango
+  number_sections: no
+  theme: default
+  toc: yes
+  toc_depth: 3
+  toc_float:
+    collapsed: no
+    smooth_scroll: yes
+---
+
+
+# Packages and settings
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=TRUE}
+# Plots
+library("ggplot2")
+library("RColorBrewer")
+library("scales")
+
+# Data handling
+library("tidyr")
+library("dplyr")
+
+# Options
+options(stringsAsFactors = FALSE)
+```
+
+# Snakemake object
+
+```{r, eval=TRUE, cache=TRUE, message=TRUE, warning=FALSE, echo=TRUE}
+print(snakemake)
+```
+
+# Gene candidates
+
+We used a custom script to extract statistics for each transcript sequence and for each protein sequences. The two resulting tables were imported into R.
+
+```{r, eval=TRUE, cache=TRUE, message=TRUE, warning=FALSE, echo=TRUE}
+stats_cds <- tbl_df(read.table(snakemake@input$cds, sep=",", header=TRUE))
+stats_transcripts <- tbl_df(read.table(snakemake@input$transcripts, sep=",", header=TRUE))
+
+transcripts_info <- left_join(stats_transcripts, stats_cds, by=c("id"="id")) %>%
+    mutate(status = ifelse(is.na(status), "none", status))
+saveRDS(transcripts_info, file = "cocla/cocla_transcripts_info.rds")
+```
+
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE, fig.width=15, fig.height=4}
+transcripts_info <- readRDS(file = "cocla/cocla_transcripts_info.rds")
+fig_transcriptcandidatestats_1 <- ggplot(transcripts_info, aes(x=seqid)) +
+    geom_bar(colour="black") +
+    theme_bw() +
+    xlab("Chromosome") +
+    ylab("Number of loci") +
+    theme(legend.position="none",
+        axis.text.x = element_text(angle = 90, hjust = 1))
+plot(fig_transcriptcandidatestats_1)
+```
+
+**Figure**: Number of predicted transcripts per chromosome
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE, fig.width=15, fig.height=4}
+transcripts_info <- readRDS(file = "cocla/cocla_transcripts_info.rds")
+fig_transcriptcandidatestats_2 <- ggplot(transcripts_info, aes(x=bpcdss)) +
+    geom_density() +
+    coord_cartesian(xlim=c(100,15000)) +
+    theme_bw() +
+    xlab("CDS size (bp)") +
+    geom_vline(xintercept=mean(transcripts_info$bpcdss)) +
+    theme(legend.position="none")
+plot(fig_transcriptcandidatestats_2)
+```
+
+**Figure**: Length of predicted coding sequences
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE, fig.width=15, fig.height=4}
+transcripts_info <- readRDS(file = "cocla/cocla_transcripts_info.rds")
+fig_transcriptcandidatestats_3 <- ggplot(transcripts_info, aes(x=ncdss)) +
+    geom_bar(position="dodge", colour="black") +
+    theme_bw() +
+    xlab("Exons per transcript") +
+    theme(legend.position="none")
+plot(fig_transcriptcandidatestats_3)
+```
+
+**Figure**: Exons per transcript
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE, fig.width=15, fig.height=4}
+transcripts_info <- readRDS(file = "cocla/cocla_transcripts_info.rds")
+fig_transcriptcandidatestats_4 <- ggplot(transcripts_info, aes(x=status)) +
+  geom_bar(colour="black") +
+  theme_bw() +
+  xlab("Status") +
+  ylab("n") +
+  theme(legend.position="none",
+        axis.text.x = element_text(angle = 90, hjust = 1))
+plot(fig_transcriptcandidatestats_4)
+```
+
+**Figure**: Completeness of coding sequences
+
+# Confidence classification
+
+## Comparison to reference databases
+
+To distinguish genes from transposable elements, fuctional genes from pseudogenes and meaningful coding sequences from random ones, we applied a confidence classifation for all transcript protein sequences. We used blastp to compare all predicted protein sequences to three reference databases:
+
+* TREP: The database of hypothetical proteins ("PTREP") contains deduced amino acid sequences. In the deduction of hypothetical proteins, frameshifts were removed in many cases. PTREP is useful for the identification of divergent TEs having no significant similarity at the DNA level [source](http://botserv2.uzh.ch/kelldata/trep-db/index.html).
+* Annotated *poaceae* proteins: Sequences were downloaded from Uniprot at 20/02/17 and further filtered for complete sequences with start and stop codon.
+* Validated *magnoliophyta* proteins: Sequences were downloaded from Uniprot at 20/02/17 and further filtered for complete sequences with start and stop codon.
+
+```{r, eval=TRUE, cache=FALSE, message=FALSE, warning=FALSE, echo=TRUE}
+blast_trep <- tbl_df(read.table(snakemake@input$trep, sep="\t", quote="", header=FALSE))
+colnames(blast_trep) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_trep <- mutate(blast_trep, qcov=((qend-qstart)+1)/qlen)
+blast_trep <- mutate(blast_trep, scov=((send-sstart)+1)/slen)
+evalue_trep <- blast_trep %>%
+    group_by(qseqid) %>%
+    filter(evalue==min(evalue)) %>%
+    select(qseqid, evalue, qcov, scov) %>%
+    group_by(qseqid) %>%
+    sample_n(1)
+
+blast_unipoa <- tbl_df(read.table(snakemake@input$unipoa, sep="\t", quote="", header=FALSE))
+colnames(blast_unipoa) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_unipoa <- mutate(blast_unipoa, qcov=((qend-qstart)+1)/qlen)
+blast_unipoa <- mutate(blast_unipoa, scov=((send-sstart)+1)/slen)
+evalue_unipoa <- blast_unipoa %>%
+    group_by(qseqid) %>%
+    filter(evalue==min(evalue)) %>%
+    select(qseqid, evalue, qcov, scov) %>%
+    group_by(qseqid) %>%
+    sample_n(1)
+
+blast_unimag <- tbl_df(read.table(snakemake@input$unimag, sep="\t", quote="", header=FALSE))
+colnames(blast_unimag) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_unimag <- mutate(blast_unimag, qcov=((qend-qstart)+1)/qlen)
+blast_unimag <- mutate(blast_unimag, scov=((send-sstart)+1)/slen)
+evalue_unimag <- blast_unimag %>%
+    group_by(qseqid) %>%
+    filter(evalue==min(evalue)) %>%
+    select(qseqid, evalue, qcov, scov) %>%
+    group_by(qseqid) %>%
+    sample_n(1)
+
+saveRDS(evalue_trep, file = "cocla/cocla_evalue_trep.rda")
+saveRDS(evalue_unimag, file = "cocla/cocla_evalue_unimag.rda")
+saveRDS(evalue_unipoa, file = "cocla/cocla_evalue_unipoa.rda")
+```
+
+Based on the evalue distribution for the best hits to each predicted protein, we set an evalue threshold to 10-10.
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE, fig.width=12, fig.height=4}
+evalue_trep <- readRDS(file = "cocla/cocla_evalue_trep.rda")
+evalue_unimag <- readRDS(file = "cocla/cocla_evalue_unimag.rda")
+evalue_unipoa <- readRDS(file = "cocla/cocla_evalue_unipoa.rda")
+
+d1 <- evalue_trep %>% ungroup() %>% select(evalue) %>% mutate(logevalue=log(evalue+1e-300)) %>% mutate(db="TREP")
+d2 <- evalue_unipoa %>% ungroup() %>% select(evalue) %>% mutate(logevalue=log(evalue+1e-300)) %>% mutate(db="UniPoa")
+d3 <- evalue_unimag %>% ungroup() %>% select(evalue) %>% mutate(logevalue=log(evalue+1e-300)) %>% mutate(db="UniMag")
+plotdata <- d1 %>% bind_rows(d2) %>% bind_rows(d3)
+
+fig_cocla_evalue <- ggplot(plotdata, aes(x=logevalue)) +
+    geom_density(aes(x=logevalue, y=..scaled..), alpha=0.5) +
+    theme_bw() +
+    xlab("log E-value") +
+    ylab("density") +
+    theme(legend.position="none") +
+    geom_vline(xintercept=log(1e-10), col="red") + 
+    facet_grid(. ~ db)
+
+plot(fig_cocla_evalue)
+```
+
+**Figure**: E-value distribution for blasts of predicted proteins to reference proteins databases. Graph shows distribution of E-values for best hits of predicted proteins to the three databases. Red line indicates evalue=1e-10.
+
+### Selection of best alignments
+
+A best reference alignment was then selected for each query sequence and database as a significant alignment with maximal overlap between query and subject sequence for the two protein databases or as an alignment with maximal query coverage for TREP database. Multiple best alignments for a protein were possible in case of same overlap or query coverage.
+
+```{r, eval=TRUE, cache=FALSE, message=TRUE, warning=FALSE, echo=TRUE}
+blast_trep <- tbl_df(read.table(snakemake@input$trep,
+    sep="\t", quote="", header=FALSE))
+colnames(blast_trep) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_trep_max <- blast_trep %>%
+    filter(evalue<1e-10) %>%
+    mutate(qcov=((qend-qstart)+1)/qlen) %>%
+    mutate(scov=((send-sstart)+1)/slen) %>%
+    group_by(qseqid) %>%
+    filter(qcov==max(qcov))
+
+blast_unimag <- tbl_df(read.table(snakemake@input$unimag,
+    sep="\t", quote="", header=FALSE))
+colnames(blast_unimag) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_unimag_max <- blast_unimag %>%
+    filter(evalue<1e-10) %>%
+    mutate(qcov=((qend-qstart)+1)/qlen) %>%
+    mutate(scov=((send-sstart)+1)/slen) %>%
+    mutate(overlap=(((send-sstart)+1)+((qend-qstart)+1))/(slen+qlen)) %>%
+    group_by(qseqid) %>%
+    filter(overlap==max(overlap))
+
+
+blast_unipoa <- tbl_df(read.table(snakemake@input$unipoa,
+    sep="\t", quote="", header=FALSE))
+colnames(blast_unipoa) <- c("qseqid", "sseqid", "pident", "qlen", "qstart", "qend", "slen" ,"sstart", "send", "evalue", "bitscore")
+blast_unipoa_max <- blast_unipoa %>%
+    filter(evalue<1e-10) %>%
+    mutate(qcov=((qend-qstart)+1)/qlen) %>%
+    mutate(scov=((send-sstart)+1)/slen) %>%
+    mutate(overlap=(((send-sstart)+1)+((qend-qstart)+1))/(slen+qlen)) %>%
+    group_by(qseqid) %>%
+    filter(overlap==max(overlap))
+
+saveRDS(blast_trep_max, file = "cocla/cocla_blast_trep_max.rds")
+saveRDS(blast_unimag_max, file ="cocla/cocla_blast_unimag_max.rds")
+saveRDS(blast_unipoa_max, file = "cocla/cocla_blast_unipoa_max.rds")
+```
+
+### Setting coverage thresholds
+
+To further fitler reference alignments, we chose coverage thresholds for best alignments between predicted proteins and reference proteins. For the TREP database, most significant best alignments covered the whole predicted proteins while only parts of the reference proteins were covered. Here, we chose a query coverage threshold of 75 % to further filter the best alignments.
+
+```{r, eval=TRUE, cache=TRUE, message=TRUE, warning=FALSE, echo=TRUE, fig.width=12, fig.height=4}
+blast_trep <- readRDS(file = "cocla/cocla_blast_trep_max.rds")
+plotdata <- blast_trep %>% ungroup() %>% select(qcov, scov) %>% gather(type, coverage)
+fig_cocla_trep <- ggplot(plotdata, aes(x=coverage)) +
+    geom_density(aes(x=coverage, y=..scaled..)) +
+    theme_bw() +
+    xlab("Coverage") +
+    ylab("Density") +
+    xlim(c(0,1)) +
+    theme(legend.position="none") +
+    geom_vline(xintercept=0.75, col="red") +
+    facet_grid(. ~ type)
+plot(fig_cocla_trep)
+```
+
+**Figure**: Coverage of best hits to TREP. Red line indicates coverage of 75 %.
+
+For the UniMag database, a high amount best alignments had a high query coverage as well as a high subject coverage. There was also a high amount of low subject coverage alignments, which indicates a significant number of fragmented protein sequences in the prediction set. Based on coverage distribution, we set threshold to 75 %.
+
+```{r, eval=TRUE, cache=TRUE, message=TRUE, warning=FALSE, echo=TRUE, fig.width=12, fig.height=4}
+blast_unimag <- readRDS(file = "cocla/cocla_blast_unimag_max.rds")
+plotdata <- blast_unimag %>% ungroup() %>% select(scov, qcov, overlap) %>% gather(type, coverage)
+fig_cocla_unimag <- ggplot(plotdata, aes(x=qcov)) +
+    geom_density(aes(x=coverage, y=..scaled..), position = "stack") +
+    theme_bw() +
+    xlab("Coverage") +
+    ylab("Density") +
+    theme(legend.position="none") +
+    geom_vline(xintercept=0.75, col="red") +
+    facet_grid(. ~ type)
+plot(fig_cocla_unimag)
+```
+
+**Figure**: Coverage of significant best alignments to magnoliophyta.
+
+For the UniPoa database, most best alignments had a high query coverage as well as a high subject coverage. Based on coverage distribution, we set threshold to 90 %.
+
+```{r, eval=TRUE, cache=TRUE, message=TRUE, warning=FALSE, echo=TRUE, fig.width=12, fig.height=4}
+blast_unipoa <- readRDS(file = "cocla/cocla_blast_unipoa_max.rds")
+plotdata <- blast_unipoa %>% ungroup() %>% select(scov, qcov, overlap) %>% gather(type, coverage)
+fig_cocla_unipoa <- ggplot(plotdata, aes(x=qcov)) +
+    geom_density(aes(x=coverage, y=..scaled..), position = "stack") +
+    theme_bw() +
+    xlab("Coverage") +
+    ylab("Density") +
+    theme(legend.position="none") +
+    geom_vline(xintercept=0.75, col="red") +
+    facet_grid(. ~ type)
+plot(fig_cocla_unipoa)
+```
+
+**Figure**: Coverage of significant best alignments to poaceae
+
+## Classification
+
+Based on alignments to the three reference databases and on completeness of the protein sequences, we classified then each single protein into two main and five sub-classes. Thereby, we used the following shema to classify each single transcript based on homology to reference databases and completeness of predicted protein sequences.
+
+* HC1: unimag and complete
+* HC2: not unimag and (not repeats and unipoa) and complete
+* LC1: (unimag or (not repeats and unipoa)) and not complete
+* LC2: not unimag and not repeats and not unipoa and complete
+* REP: not unimag and repeats
+* *none*: not unimag and not repeats and not unipoa and not complete
+
+
+
+```{r, eval=TRUE, cache=TRUE, message=FALSE, warning=FALSE, echo=TRUE}
+transcripts_info <- readRDS(file ="cocla/cocla_transcripts_info.rds")
+
+blast_trep <- readRDS(file = "cocla/cocla_blast_trep_max.rds")
+blast_unimag <- readRDS(file = "cocla/cocla_blast_unimag_max.rds")
+blast_unipoa <- readRDS(file = "cocla/cocla_blast_unipoa_max.rds")
+
+th_unipoa_scov <- 0.75
+th_unimag_scov <- 0.75
+th_unipoa_qcov <- 0.75
+th_unimag_qcov <- 0.75
+th_repeat_qcov <- 0.75
+
+
+repeats <- is.element(transcripts_info$id,
+    unique(filter(blast_trep, qcov>th_repeat_qcov)$qseqid))
+unipoa <- is.element(transcripts_info$id,
+    unique(filter(blast_unipoa, qcov>th_unipoa_qcov & scov>th_unipoa_scov)$qseqid))
+unimag <- is.element(transcripts_info$id,
+    unique(filter(blast_unimag, qcov>th_unimag_qcov & scov>th_unimag_scov)$qseqid))
+
+complete <- transcripts_info$status=="complete"
+internal <- transcripts_info$status=="internal stop"
+
+transcripts_info$primconf <- rep("none", nrow(transcripts_info))
+transcripts_info$secconf <- rep("none", nrow(transcripts_info))
+
+
+transcripts_info[unimag & complete,]$primconf <- "HC"
+transcripts_info[!unimag & (!repeats & unipoa) & complete,]$primconf <- "HC"
+transcripts_info[(unimag | (!repeats & unipoa)) & !complete,]$primconf <- "LC"
+transcripts_info[!unimag & !repeats & !unipoa & complete,]$primconf <- "LC"
+transcripts_info[!unimag & !repeats & !unipoa & !complete,]$primconf <- "LC"
+transcripts_info[!(unimag & complete) & repeats,]$primconf <- "LC"
+
+transcripts_info[unimag & complete,]$secconf <- "HC1"
+transcripts_info[!unimag & (!repeats & unipoa) & complete,]$secconf <- "HC2"
+transcripts_info[(unimag | (!repeats & unipoa)) & !complete,]$secconf <- "LC1"
+transcripts_info[!unimag & !repeats & !unipoa & complete,]$secconf <- "LC2"
+transcripts_info[!unimag & !repeats & !unipoa & !complete,]$secconf <- "LC3"
+transcripts_info[!(unimag & complete) & repeats,]$secconf <- "REP"
+
+##############################################################################################################
+# save results
+
+write.table(select(transcripts_info, id, primconf, secconf), "confidence_classification.tab", sep=",", row.names=FALSE, quote=FALSE)
+saveRDS(transcripts_info, file = "cocla/cocla_transcripts_info_conf.rda")
+```
