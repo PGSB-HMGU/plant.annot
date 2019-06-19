@@ -4,7 +4,7 @@ Repository for the annotation pipeline used @ PGSB. Tested on plant genomes. Dev
 
 # Requirements
 
-All dependencies should be covered by the provided conda environment 
+Most dependencies should be covered by the provided conda environment 
 
 # Usage
 
@@ -28,18 +28,18 @@ All dependencies should be covered by the provided conda environment
 
 <code>conda activate plant.annot</code>
 
-- download and install Transdecoder 3.0.1 [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki)
+- download and install Transdecoder 3.0.1 from [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki)
 - download transposon database PTREP from [Hypothetical TREP protein sequences](https://botserv2.uzh.ch/kelldata/trep-db/downloadFiles.html)
 - download reference proteins from uniprot
 - download reference proteins form closely related species
 - edit config.yaml
-	- define ISOseq data as described in config.yaml
-	- define reference proteins as described in config.yaml
-	- define RNAseq data as described in config.yaml
-	- build hisat2 index
-	- build gmap index
-	- split large chromosomes into single files to speed up gth
-	- 
+    - define ISOseq data as described in config.yaml
+    - define reference proteins as described in config.yaml
+    - define RNAseq data as described in config.yaml
+    - build hisat2 index
+    - build gmap index
+    - split large chromosomes into single files to speed up gth
+    - 
 - perform a dry run
 
 <code>snakemake final_files -np</code>

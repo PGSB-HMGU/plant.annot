@@ -186,7 +186,7 @@ class Feature(object):
         if len(self.primary_confidence_class)>0:
             writeattributes += ";primary_confidence_class=%s" % (self.primary_confidence_class)
         if len(self.secondary_condidence_class)>0:
-            writeattributes += ";secondary_condidence_class=%s" % (self.secondary_condidence_class)
+            writeattributes += ";secondary_confidence_class=%s" % (self.secondary_condidence_class)
         
         return [self.seqid, self.source, self.ftype, self.start, self.end, self.score, self.strand, self.phase, writeattributes]
 
