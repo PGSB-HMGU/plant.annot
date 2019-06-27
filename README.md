@@ -32,6 +32,7 @@ Most dependencies should be covered by the provided conda environment
 - download transposon database PTREP from [Hypothetical TREP protein sequences](https://botserv2.uzh.ch/kelldata/trep-db/downloadFiles.html)
 - download reference proteins from uniprot
 - download reference proteins form closely related species
+- protein sequences must include STOP amino acids as ('*')
 - build hisat2 index
 - build gmap index
 - split large chromosomes into single files to speed up gth
