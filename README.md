@@ -1,5 +1,5 @@
 # Plant.annot
-Repository for the annotation pipeline used @ PGSB. Tested on plant genomes. Developed by Sven O. Twardziok.
+Repository for the annotation pipeline used @ PGSB. Tested on plant genomes.
 
 
 # Requirements
@@ -36,6 +36,7 @@ Most dependencies should be covered by the provided conda environment
     - define ISOseq data as described in config.yaml
     - define reference proteins as described in config.yaml
     - define RNAseq data as described in config.yaml
+    - review executable section in config.yaml 
     - build hisat2 index
     - build gmap index
     - split large chromosomes into single files to speed up gth
