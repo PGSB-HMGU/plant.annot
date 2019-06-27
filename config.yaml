@@ -98,6 +98,6 @@ executables:
         extract: <path to cufflinks_gtf_genome_to_cdna_fasta.pl>
         convertgff3: <path to cufflinks_gtf_to_alignment_gff3.pl>
         convertgenome: <path to cdna_alignment_orf_to_genome_orf.pl>
-        longorfs: TransDecoder.LongOrfs
-        predict: TransDecoder.Predict
+        longorfs: <path to TransDecoder.LongOrfs>
+        predict: <path to TransDecoder.Predict>
 
