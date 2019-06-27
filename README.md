@@ -51,4 +51,4 @@ Most dependencies should be covered by the provided conda environment
 
 - run on a cluster
 
-<code>snakemake fina_files --cluster "qsub"</code>
+<code>snakemake final_files --cluster "qsub"</code>
