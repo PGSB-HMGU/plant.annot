@@ -147,7 +147,7 @@ dependencies:
   - r-lattice=0.20_38=r351hc070d10_0
   - r-lazyeval=0.2.1=r351hc070d10_2
   - r-magrittr=1.5=r351h6115d3f_1001
-  - r-markdown=0.9=r351hc070d10_0
+  - r-rmarkdown=
   - r-mass=7.3_51.1=r351hc070d10_0
   - r-matrix=1.2_15=r351hc070d10_0
   - r-mgcv=1.8_26=r351hc070d10_0
@@ -187,7 +187,6 @@ dependencies:
   - snakemake-minimal=5.4.0=py_0
   - sqlite=3.20.1=2
   - stringtie=1.3.4=py36_0
-  - transdecoder=3.0.1
   - tk=8.6.8=0
   - tktable=2.10=h14c3975_0
   - urllib3=1.12=py36_0
