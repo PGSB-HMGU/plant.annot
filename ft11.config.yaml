@@ -1,0 +1,575 @@
+data:
+    longnucl:
+        ds1: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_pooled_rna_teloprime.polished.lq.fastq.gz
+        ds2: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_pooled_rna_combined_polished.lq.fastq.gz
+        ds3: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_pooled_rna_teloprime.polished.hq.fastq.gz
+        ds4: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_embryonic_rna_smarter_polished.lq.fastq.gz
+        ds5: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_pooled_rna_combined_polished.hq.fastq.gz
+        ds6: /nfs/pgsb/data/shape/ft11_rnaseq/Isoseq/ft11_embryonic_rna_smarter_polished.hq.fastq.gz
+    refprot:
+        triticeae: /nfs/pgsb/commons/databases/plant.annot/Evidences/refproteins4triticeae_Mar2017_filtered.fasta
+    rnaseq:
+        FT11:
+          roots1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/2072952_CAGATC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/2072952_CAGATC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/2072952_CAGATC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/2072952_CAGATC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_1/s435_2072952_CAGATC_L002_R2_002.fastq.gz
+          roots2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/2072953_ACTTGA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_2/s435_2072953_ACTTGA_L002_R2_002.fastq.gz
+          roots3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/2072954_GATCAG_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_roots_3/s435_2072954_GATCAG_L002_R2_002.fastq.gz
+          embryo1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R1_004.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/2072946_ATCACG_L002_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_1/s435_2072946_ATCACG_L002_R2_004.fastq.gz
+          embryo2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/2072947_CGATGT_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_2/s435_2072947_CGATGT_L002_R2_003.fastq.gz
+          embryo3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/2072948_TTAGGC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_embryo_3/s435_2072948_TTAGGC_L002_R2_003.fastq.gz
+          leaves1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/2072949_TGACCA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_1/s435_2072949_TGACCA_L002_R2_003.fastq.gz
+          leaves2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/2072950_ACAGTG_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_2/s435_2072950_ACAGTG_L002_R2_002.fastq.gz
+          leaves3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/2072951_GCCAAT_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_Leaves_3/s435_2072951_GCCAAT_L002_R2_002.fastq.gz
+          internode1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L002_R1_002.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/2072955_TAGCTT_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_1/s435_2072955_TAGCTT_L002_R2_002.fastq.gz
+          internode2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/2072956_GGCTAC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/2072956_GGCTAC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/s435_2072956_GGCTAC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/s435_2072956_GGCTAC_L002_R1_001.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/2072956_GGCTAC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/2072956_GGCTAC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/s435_2072956_GGCTAC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_2/s435_2072956_GGCTAC_L002_R2_001.fastq.gz
+          internode3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/2072957_CTTGTA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_internode_3/s435_2072957_CTTGTA_L002_R2_003.fastq.gz
+          CAR1_1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/2072958_AGTCAA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_1/s435_2072958_AGTCAA_L002_R2_003.fastq.gz
+          CAR1_2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R1_004.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/2072959_AGTTCC_L002_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_2/s435_2072959_AGTTCC_L002_R2_004.fastq.gz
+          CAR1_3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R1_004.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/2072960_ATGTCA_L002_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR1_3/s435_2072960_ATGTCA_L002_R2_004.fastq.gz
+          CAR2_1:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R1_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R1_004.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/2072961_CCGTCC_L002_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L001_R2_004.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_1/s435_2072961_CCGTCC_L002_R2_004.fastq.gz
+          CAR2_2:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/2072962_GTCCGC_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_2/s435_2072962_GTCCGC_L002_R2_003.fastq.gz
+          CAR2_3:
+            1:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R1_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R1_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R1_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R1_003.fastq.gz
+            2:
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/2072963_GTGAAA_L002_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L001_R2_003.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R2_001.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R2_002.fastq.gz
+              - /nfs/pgsb/data/shape/ft11_rnaseq/RNA_seq/FT11_CAR2_3/s435_2072963_GTGAAA_L002_R2_003.fastq.gz
+
+#--- databases and indicies
+    hisat2db: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/180903_FT11_chloro_clean_pseudomolecules.fasta_HISAT2_idx/180903_FT11_chloro_clean_pseudomolecules.fasta_HISAT2_idx
+    gmap:
+        dbdir: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/180903_FT11_chloro_clean_pseudomolecules.fasta_GMAP_idx/
+        dbname: 180903_FT11_chloro_clean_pseudomolecules.fasta_GMAP_idx
+    gth:
+        chr1H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr1H.fasta
+        chr2H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr2H.fasta
+        chr3H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr3H.fasta
+        chr4H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr4H.fasta
+        chr5H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr5H.fasta
+        chr6H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr6H.fasta
+        chr7H: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chr7H.fasta
+        chrUn: /nfs/scratch/thomas.lux/annotations/SHAPE/FT11/genome/chrUn.fasta
+    genome: /nfs/pgsb/raw/h.vulgare/shape_barke_f11_hor/FT11/180903_FT11_chloro_clean_pseudomolecules.fasta
+    transdecoder:
+        pfamhmm: /nfs/pgsb/commons/databases/plant.annot/PFAM/Pfam-A.hmm
+        blastp: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot-Magnoliophyta_reviewed_160803
+    cocla:
+        unimag: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Magnoliophyta_reviewed_collapsed_170220.fasta
+        unipoa: /nfs/pgsb/commons/databases/plant.annot/Classification/uniprot_Poaceae_complete_collapsed_170220.fasta
+        trep: /nfs/pgsb/commons/databases/plant.annot/Classification/PTREP16_sep2016.fasta
+
+#--- parameters for progams
+hisat2:
+    arguments: -t --dta --no-unal --max-intronlen 50000
+    memory: 24G
+    nodes: 8
+    threads: 8
+    job_name: hisat2
+    log: "hisat2.log"
+    jobs: 4
+
+stringtie:
+    arguments: -m 150 -t -f 0.3
+    memory: 4G
+    nodes: 8
+    threads: 8
+    job_name: stringtie
+    log: "stringtie.log"
+
+gmap:
+    arguments: -K 50000
+    memory: 16G
+    nodes: 8
+    threads: 8
+    job_name: gmap
+    log: "gmap.log"
+
+gth:
+    arguments: -species rice -startcodon -finalstopcodon -gcmaxgapwidth 50000 -gcmincoverage 70 -paralogs -prseedlength 7 -prhdist 4
+    memory: 5G
+    nbatches: 100
+    nodes: 1
+    threads: 1
+    job_name: gth
+    log: "gth.log"
+
+transdecoder:
+    job_name: transdecoder
+    log: "transdecoder.log"
+    nbatches: 1000
+    predict:
+        nodes: 1
+        memory: 8G
+    convert:
+        nodes: 1
+        memory: 8G
+    stringtie:
+        memory: 8G
+        nodes: 1
+        threads: 1
+    hmmscan:
+        memory: 2G
+        nodes: 1
+        threads: 1
+    blastp:
+        memory: 8G
+        nodes: 1
+        threads: 1
+
+
+cocla:
+    nbatches: 500
+    memory: 1G
+    nodes: 4
+    threads: 4
+    evalue: 10
+    job_name: cocla
+    version: "01"
+    prefix: "ft11"
+    unipoa_threshold: 0.95 #complete
+    unimag_threshold: 0.33 #reviewed
+    repeat_threshold: 0.95 #trep
+
+executables:
+    blastp: blastp
+    cuffcompare: cuffcompare
+    gffread: gffread
+    gth: ~/Applications/gth-1.7.0-Linux_x86_64-64bit/bin/gth
+    gmap: gmap
+    hmmscan: hmmscan
+    hisat2: hisat2
+    samtools: samtools
+    bamtools: bamtools
+    stringtie: stringtie
+    transdecoder:
+        extract: /home/pgsb/thomas.lux/Applications/TransDecoder-3.0.1/util/cufflinks_gtf_genome_to_cdna_fasta.pl
+        convertgff3: /home/pgsb/thomas.lux/Applications/TransDecoder-3.0.1/util/cufflinks_gtf_to_alignment_gff3.pl
+        convertgenome: /home/pgsb/thomas.lux/Applications/TransDecoder-3.0.1/util/cdna_alignment_orf_to_genome_orf.pl
+        longorfs: /home/pgsb/thomas.lux/Applications/TransDecoder-3.0.1/TransDecoder.LongOrfs
+        predict: /home/pgsb/thomas.lux/Applications/TransDecoder-3.0.1/TransDecoder.Predict

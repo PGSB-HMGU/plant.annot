@@ -2,7 +2,7 @@
 title: "Gene annotation"
 subtitle: "Confidence classification"
 author:
-    - "sven.twardziok@posteo.de"
+    - "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 params:
    rmd: "report.Rmd"
@@ -176,7 +176,7 @@ fig_cocla_evalue <- ggplot(plotdata, aes(x=logevalue)) +
     xlab("log E-value") +
     ylab("density") +
     theme(legend.position="none") +
-    geom_vline(xintercept=log(1e-10), col="red") + 
+    geom_vline(xintercept=log(1e-10), col="red") +
     facet_grid(. ~ db)
 
 plot(fig_cocla_evalue)
@@ -304,11 +304,11 @@ blast_trep <- readRDS(file = "cocla/cocla_blast_trep_max.rds")
 blast_unimag <- readRDS(file = "cocla/cocla_blast_unimag_max.rds")
 blast_unipoa <- readRDS(file = "cocla/cocla_blast_unipoa_max.rds")
 
-th_unipoa_scov <- 0.75
-th_unimag_scov <- 0.75
-th_unipoa_qcov <- 0.75
-th_unimag_qcov <- 0.75
-th_repeat_qcov <- 0.75
+th_unipoa_scov <- snakemake@params$unipoa_threshold
+th_unimag_scov <- snakemake@params$unimag_threshold
+th_unipoa_qcov <- snakemake@params$unipoa_threshold
+th_unimag_qcov <- snakemake@params$unimag_threshold
+th_repeat_qcov <- snakemake@params$repeat_threshold
 
 
 repeats <- is.element(transcripts_info$id,
@@ -342,6 +342,8 @@ transcripts_info[!(unimag & complete) & repeats,]$secconf <- "REP"
 ##############################################################################################################
 # save results
 
-write.table(select(transcripts_info, id, primconf, secconf), "confidence_classification.tab", sep=",", row.names=FALSE, quote=FALSE)
+version <- snakemake@params$version
+
+write.table(select(transcripts_info, id, primconf, secconf), file = paste("confidence_classification_",version,".tab",sep = ""), sep=",", row.names=FALSE, quote=FALSE)
 saveRDS(transcripts_info, file = "cocla/cocla_transcripts_info_conf.rda")
 ```
