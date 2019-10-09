@@ -245,7 +245,7 @@ rule gth_run:
         arguments = config["gth"]["arguments"],
         memory = config["gth"]["memory"],
         nodes = config["gth"]["nodes"],
-        job_name = "Chunking",
+        job_name = "gthing",
         log = config['gth']['log']
     resources:
         load = 1
