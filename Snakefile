@@ -245,7 +245,7 @@ rule gth_run:
         arguments = config["gth"]["arguments"],
         memory = config["gth"]["memory"],
         nodes = config["gth"]["nodes"],
-        job_name = "gthing",
+        job_name = "Chunking",
         log = config['gth']['log']
     resources:
         load = 1
@@ -712,6 +712,7 @@ rule cocla_report:
         unipoa_threshold = config['cocla']['unipoa_threshold'],
         unimag_threshold = config['cocla']['unimag_threshold'],
         repeat_threshold = config['cocla']['repeat_threshold'],
+        version = VERSION,
     resources:
         load = 1
     threads: 1
