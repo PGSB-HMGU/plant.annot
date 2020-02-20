@@ -5,7 +5,7 @@
 # @author: sven.twardziok@posteo.de
 
 
-configfile: "ft11.config.yaml"
+configfile: "config.yaml"
 
 import csv
 from modules import fasta, mygff
