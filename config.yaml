@@ -82,6 +82,11 @@ cocla:
     memory: 1G
     nodes: 1
     evalue: 10
+    version: <number>
+    prefix: <"short name of genome">
+    unipoa_threshold: 0.95 #complete
+    unimag_threshold: 0.95 #reviewed
+    repeat_threshold: 0.95 #trep
 
 executables:
     blastp: blastp
