@@ -55,11 +55,11 @@ gmap:
 gth:
     arguments: -species rice -startcodon -finalstopcodon -gcmaxgapwidth 50000 -gcmincoverage 70 -paralogs -prseedlength 7 -prhdist 4
     memory: 5G
-    nbatches: 10
+    nbatches: 100
     nodes: 1
 
 transdecoder:
-    nbatches: 5
+    nbatches: 100
     predict:
         nodes: 1
         memory: 4G
@@ -78,7 +78,7 @@ transdecoder:
 
 
 cocla:
-    nbatches: 10
+    nbatches: 100
     memory: 1G
     nodes: 1
     evalue: 10
