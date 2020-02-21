@@ -38,43 +38,64 @@ data:
 
 # the following section defines all executables and parameters
 hisat2:
-    arguments: --dta --no-unal --max-intronlen 50000
-    memory: 1G
-    nodes: 4
+    arguments: -t --dta --no-unal --max-intronlen 50000
+    memory: 24G
+    nodes: 8
+    threads: 8
+    job_name: hisat2
+    log: "hisat2.log"
+    jobs: 4
+
 
 stringtie:
     arguments: -m 150 -t -f 0.3
-    memory: 1G
-    nodes: 4
+    memory: 4G
+    nodes: 8
+    threads: 8
+    job_name: stringtie
+    log: "stringtie.log"
+
 
 gmap:
     arguments: -K 50000
-    memory: 4G
-    nodes: 1
+    memory: 16G
+    nodes: 8
+    threads: 8
+    job_name: gmap
+    log: "gmap.log"
 
 gth:
     arguments: -species rice -startcodon -finalstopcodon -gcmaxgapwidth 50000 -gcmincoverage 70 -paralogs -prseedlength 7 -prhdist 4
     memory: 5G
     nbatches: 100
     nodes: 1
+    threads: 1
+    job_name: gth
+    log: "gth.log"
+
 
 transdecoder:
-    nbatches: 100
+    job_name: transdecoder
+    log: "transdecoder.log"
+    nbatches: 1000
     predict:
         nodes: 1
-        memory: 4G
+        memory: 8G
     convert:
         nodes: 1
-        memory: 4G
+        memory: 8G
     stringtie:
-        memory: 2G
-        nodes: 4
+        memory: 8G
+        nodes: 1
+        threads: 1
     hmmscan:
-        memory: 10M
+        memory: 2G
         nodes: 1
+        threads: 1
     blastp:
-        memory: 1G
+        memory: 8G
         nodes: 1
+        threads: 1
 
 
 cocla:
@@ -82,6 +103,7 @@ cocla:
     memory: 1G
     nodes: 1
     evalue: 10
+    job_name: cocla
     version: <number>
     prefix: <"short name of genome">
     unipoa_threshold: 0.95 #complete
