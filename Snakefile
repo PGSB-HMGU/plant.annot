@@ -133,7 +133,7 @@ rule gmap_run:
         load = 20
     threads: config['gmap']['threads']
     run:
-        shell("zcat {input.fasta} | {params.executable} {params.arguments} -f gff3_gene -d {params.dbname} -D {params.dbdir} -t {params.nodes} > {output.gff3}")
+        shell("cat {input.fasta} | {params.executable} {params.arguments} -f gff3_gene -d {params.dbname} -D {params.dbdir} -t {params.nodes} > {output.gff3}")
 
 
 rule gmap_combine:
@@ -245,7 +245,7 @@ rule gth_run:
         arguments = config["gth"]["arguments"],
         memory = config["gth"]["memory"],
         nodes = config["gth"]["nodes"],
-        job_name = "Chunking",
+        job_name = config['gth']['job_name'],
         log = config['gth']['log']
     resources:
         load = 1
