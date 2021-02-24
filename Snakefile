@@ -133,7 +133,7 @@ rule gmap_run:
         load = 20
     threads: config['gmap']['threads']
     run:
-        shell("cat {input.fasta} | {params.executable} {params.arguments} -f gff3_gene -d {params.dbname} -D {params.dbdir} -t {params.nodes} > {output.gff3}")
+        shell("zcat {input.fasta} | {params.executable} {params.arguments} -f gff3_gene -d {params.dbname} -D {params.dbdir} -t {params.nodes} > {output.gff3}")
 
 
 rule gmap_combine:
