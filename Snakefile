@@ -766,7 +766,7 @@ rule final_files:
             tmplcmrnas = []
             for mrna in gene.features:
                 mrna.primary_confidence_class = conflcass[mrna.identifier]["primconf"]
-                mrna.secondary_condidence_class = conflcass[mrna.identifier]["secconf"]
+                mrna.secondary_confidence_class = conflcass[mrna.identifier]["secconf"]
                 if conflcass[mrna.identifier]["primconf"] == "HC":
                     tmpclass = "HC"
                     tmphcmrnas.append(mrna)
